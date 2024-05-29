@@ -20,7 +20,6 @@ from rich.progress import TimeElapsedColumn
 from rich.progress import TimeRemainingColumn
 from rich.rule import Rule
 from rich.table import Table
-from torch.utils.tensorboard import SummaryWriter
 
 
 # This is here so that the history can be pickled.
@@ -125,8 +124,6 @@ class Tracker:
         A dictionary containing the metrics for each label.
     history : dict
         A dictionary containing the history of metrics for each label.
-    writer : SummaryWriter
-        A SummaryWriter object for logging the metrics.
     rank : int
         The rank of the current process.
     step : int
@@ -162,7 +159,6 @@ class Tracker:
 
     def __init__(
         self,
-        writer: SummaryWriter = None,
         log_file: str = None,
         rank: int = 0,
         console_width: int = 100,
@@ -173,8 +169,6 @@ class Tracker:
 
         Parameters
         ----------
-        writer : SummaryWriter, optional
-            A SummaryWriter object for logging the metrics, by default None.
         log_file : str, optional
             The path to the log file, by default None.
         rank : int, optional

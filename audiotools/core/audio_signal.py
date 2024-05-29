@@ -69,7 +69,7 @@ class AudioSignal(
     is defined in ``core/audio_signal.py``, while extensions to
     that functionality are defined in the other ``core/*.py``
     files. For example, all the display-based functionality
-    (e.g. plot spectrograms, waveforms, write to tensorboard)
+    (e.g. plot spectrograms, waveforms)
     are in ``core/display.py``.
 
     Parameters

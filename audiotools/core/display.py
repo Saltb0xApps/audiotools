@@ -132,16 +132,13 @@ class DisplayMixin:
         plot_fn: typing.Union[typing.Callable, str] = "specshow",
         **kwargs,
     ):
-        """Writes a signal and its spectrogram to Tensorboard. Will show up
-        under the Audio and Images tab in Tensorboard.
+        """Writes a signal and its spectrogram. Will show up
+        under the Audio and Images tab.
 
         Parameters
         ----------
         tag : str
             Tag to write signal to (e.g. ``clean/sample_0.wav``). The image will be
-            written to the corresponding ``.png`` file (e.g. ``clean/sample_0.png``).
-        writer : SummaryWriter
-            A SummaryWriter object from PyTorch library.
         step : int, optional
             The step to write the signal to, by default None
         plot_fn : typing.Union[typing.Callable, str], optional
